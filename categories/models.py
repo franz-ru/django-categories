@@ -24,7 +24,7 @@ class Category(CategoryBase):
         )
     thumbnail_width = models.IntegerField(blank=True, null=True)
     thumbnail_height = models.IntegerField(blank=True, null=True)
-    order = models.IntegerField(default=0)
+    order = models.IntegerField(_('order'), default=0)
     alternate_title = models.CharField(
         blank=True,
         default="",
