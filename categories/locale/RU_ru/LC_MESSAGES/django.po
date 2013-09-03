@@ -97,7 +97,7 @@ msgstr "миниатюра"
 
 #: models.py:27
 msgid "order"
-msgstr ""
+msgstr "порядок"
 
 #: models.py:38
 msgid "description"
