@@ -19,7 +19,9 @@ class Category(CategoryBase):
     thumbnail = models.FileField(
         upload_to=THUMBNAIL_UPLOAD_PATH,
         null=True, blank=True,
-        storage=STORAGE(),)
+        storage=STORAGE(),
+        verbose_name=_('thumbnail')
+        )
     thumbnail_width = models.IntegerField(blank=True, null=True)
     thumbnail_height = models.IntegerField(blank=True, null=True)
     order = models.IntegerField(default=0)
@@ -33,7 +35,7 @@ class Category(CategoryBase):
         max_length=200,
         help_text="An alternative URL to use instead of the one derived from "
                   "the category hierarchy.")
-    description = models.TextField(blank=True, null=True)
+    description = models.TextField(_('description'), blank=True, null=True)
     meta_keywords = models.CharField(
         blank=True,
         default="",
